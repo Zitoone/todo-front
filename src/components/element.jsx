@@ -1,4 +1,5 @@
 import { useState } from "react"
+import('dotenv').config()
 
 export default function Element({id, title, isCompleted, creationDate, onDelete, completedDate=null}){
     const [showIsCompleted, setShowIsCompleted]=useState(isCompleted)
@@ -7,7 +8,7 @@ export default function Element({id, title, isCompleted, creationDate, onDelete,
 
     const toggleToDo= async (id)=>{
         try {
-            const req = await fetch(`http://localhost:3000/api/v1/todos/${id}`,
+            const req = await fetch(`https://todo-back-6kzw.onrender.com//api/v1/todos/${id}`,
             {method: "PATCH"})
             if(!req.ok) throw new Error("Impossible de mettre à jour la tâche")
 
