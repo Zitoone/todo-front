@@ -16,7 +16,7 @@ export default function TodoPage(){
             setLoading(true)
 
             //Récupérer les données du back
-            const req=await fetch("http://localhost:3000/api/v1/todos")
+            const req=await fetch(`${import.meta.env.VITE_APP_API_URL}/todos`)
             if(!req.ok) throw new Error("Erreur lors du chargement des tâches")
 
             const datas= await req.json()
@@ -34,7 +34,7 @@ export default function TodoPage(){
 
     const deleteElement= async(id)=>{
     try {
-    const req = await fetch(`http://localhost:3000/api/v1/todos/${id}`,
+    const req = await fetch(`${import.meta.env.VITE_APP_API_URL}/todos/${id}`,
     {method: "DELETE"})
     if(!req.ok) throw new Error("Impossible de supprimer la tâche")
         
@@ -49,7 +49,7 @@ export default function TodoPage(){
 
     const addToDo=async(title)=>{
         try {
-            const req=await fetch('http://localhost:3000/api/v1/todos', {
+            const req=await fetch(`${import.meta.env.VITE_APP_API_URL}/todos/`, {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({title})
