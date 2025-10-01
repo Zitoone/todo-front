@@ -7,7 +7,7 @@
 ## 📝 Description
 
 **Todo list** est une application web simple permettant à un utilisateur de consulter sa todo list, ajouter ou supprimer des todos.
-Ce projet est couplé avec une API qui récupère les todos dans une base de données, Le frontend a donc besoin de l'API pour fonctionner correctement`https://github.com/Zitoone/todo-back`
+Ce projet est couplé avec une API qui récupère les todos dans une base de données, Le frontend a donc besoin de l'API pour fonctionner correctement [todo-front](https://github.com/Zitoone/todo-back)
 
 
 ## 📂 Structure du projet
@@ -28,17 +28,20 @@ src/
 
 ### Etapes
 
-1. Cloner le repo du front
+#### 1. Cloner le repo du front
+
 ```bash
 git clone https://github.com/Zitoone/todo-front
 ```
 
-2. Installer les dépendances
+#### 2. Installer les dépendances
+
 ```bash
 npm install
 ```
 
-3. Lancer le frontend
+#### 3. Lancer le frontend
+
 ```bash
 npm run dev
 ```
@@ -59,21 +62,25 @@ L'application est disponible sur [http://localhost:5173]
 
 ## 🔧 Scripts disponibles
 
-npm run dev          # Lance le serveur de développement
-npm run build        # Construit l'application pour la production
-npm run preview      # Prévisualise la build de production
+`npm run dev `         → Lance le serveur de développement
+`npm run build`        → Construit l'application pour la production
+`npm run preview`      → Prévisualise la build de production
 
 
 ## 🚀 Déploiement
 
-**Important** Déployer le backend d'abord!
+**Important** Déployer le backend d'abord !
 
 ### Etapes
 
-1. Déployer le backend (voir README du projet [todo-back](https://github.com/Zitoone/todo-back))  
-→ exemple de déploiement : [Render](https://render.com) et récupérer l’URL du backend déployé (exemple : `https://todo-back-6kzw.onrender.com`).
+#### 1. Déployer le backend 
+(voir README du projet [todo-back](https://github.com/Zitoone/todo-back))  
+→ exemple de déploiement : [Render](https://render.com)
+Aprés avoir déployé votre back, récupérer l’URL (exemple : `https://todo-back-6kzw.onrender.com`).
 
-2. Déployer le front avec Vercel (Créer un compte si besoin [Vercel](https://vercel.com/) et connecter le à votre compte Github)
+#### 2. Déployer le front avec Vercel 
+Créer un compte si besoin [Vercel](https://vercel.com/) et connecter le à votre compte Github, vous pouvez faire le déploiement directement en sélectionnant votre repo sur Vercel, ou bien par ces commandes:
+
 - Installer Vercel sur le projet front
 ```bash
 npx vercel
@@ -86,14 +93,14 @@ npx vercel login
 Lorsque l'installation vous demande d'ajouter les variables d'environnement, n'oubliez pas d'indiquer à Vercel la connection avec l'API.
 (exemple: `VITE_APP_API_URL=https://todo-back-6kzw.onrender.com/api/v1`)
 
-_Les variables d'environnement peut être renseignées également une fois le déploiement effectué via le **dashboard** de l'application sur Vercel, dans la section **Settings**, puis **Environnement Variables**_
+_Les variables d'environnement peuvent être renseignées également une fois le déploiement effectué via le **dashboard** de l'application sur Vercel, dans la section **Settings**, puis **Environnement Variables**_
 
 3. Configuration des variables d'environnement dans le dossier frontend
 
 Créer un fichier `.env` à la racine :
 
 ```env
-VITE_APP_API_URL=https://todo-back-6kzw.onrender.com/
+VITE_APP_API_URL=https://url_de_votre_back/
 ```
 
 5. Le frontend est alors disponible en ligne à l’URL fournie par Vercel 🚀
