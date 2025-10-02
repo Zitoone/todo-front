@@ -69,23 +69,28 @@ export default function TodoPage(){
     if(error)return <p style={{color:"red"}}>{error}</p>
 
     return(
-        <>
-            <h1>Ajouter une tâche</h1>
-            <AddElement onAdd={addToDo} />
-        <ul>
-            
-            {todos.map(todo=>(
-                <Element 
-                    key={todo._id}
-                    id={todo._id}
-                    title={todo.title}
-                    isCompleted={todo.isCompleted}
-                    creationDate={todo.creationDate}
-                    completedDate={todo.completedDate}
-                    onDelete={()=> deleteElement(todo._id)} />
-            ))}
-        </ul>
-        </>
+        <main>
+            <h1>TO DO LIST OLIVIA</h1>
+
+            <div className="list">
+                <AddElement onAdd={addToDo} />
+
+                <ul>
+                    
+                    {todos.map(todo=>(
+                        <Element 
+                            key={todo._id}
+                            id={todo._id}
+                            title={todo.title}
+                            isCompleted={todo.isCompleted}
+                            creationDate={todo.creationDate}
+                            completedDate={todo.completedDate}
+                            onDelete={()=> deleteElement(todo._id)} />
+                    ))}
+                </ul>
+            </div>
+
+        </main>
     )
 
     //Afficher les élèments de liste en 2 parties: à compléter et complétée

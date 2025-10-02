@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+$title: "Bitcount Prop Double", system-ui;
+$main-font: "Funnel Sans", sans-serif;
+
+body{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(222,168,248,1) 0%, rgba(168,222,258,1) 21.9%, rgba(189,250,205,1) 35.6%, rgba(243,250,189,1) 53.9%, rgba(250,227,189,1) 66.8%, rgba(248,172,171,1) 95%, rgba(254,170,212,1) 99.9% );
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif   ;
+}
+main{
+    text-align: center;
+}
+
+h1{
+    font-family: $title;
+}
+
+.list{
+    font-family: $main-font;
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    ul{
+        list-style: none;
+    }
+    li{
+        text-align: center;
+    }
+}
